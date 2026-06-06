@@ -1,0 +1,42 @@
+[
+  {
+    "id": "r1",
+    "studentName": "Rohan Deshmukh",
+    "examQualified": "Indian Army Agniveer",
+    "rankPosition": "Selected (GD) - Army Rally 2025",
+    "beforeStory": "Rohan was unable to complete the 1.6km running course under 7 minutes and struggled with academic discipline.",
+    "afterStory": "Under the physical instructors at Still Academy, Rohan brought his running time down to 5:12, got full physical marks, and easily cleared the written exam.",
+    "imageUrl": "/images/cadet_uniform_1.png",
+    "createdAt": "2025-11-20T00:00:00.000Z"
+  },
+  {
+    "id": "r2",
+    "studentName": "Sneha Patil",
+    "examQualified": "Maharashtra Police Bharti",
+    "rankPosition": "PSI (Sub-Inspector) - Rank 14",
+    "beforeStory": "Sneha faced issues with shot put technique and lacked structured practice resources for Marathi grammar.",
+    "afterStory": "Weekly mock tests and customized ground instruction helped her score 47/50 in the physical test and clear the written test with flying colors.",
+    "imageUrl": "/images/cadet_uniform_1.png",
+    "createdAt": "2025-12-15T00:00:00.000Z"
+  },
+  {
+    "id": "r3",
+    "studentName": "Amit Verma",
+    "examQualified": "SSC GD Constable",
+    "rankPosition": "BSF Selected (Rank 482)",
+    "beforeStory": "Amit lacked proper guidance and resources in his hometown, leading to low confidence in competitive exams.",
+    "afterStory": "Utilizing our hostel facility, structured 24/7 library, and daily practice sessions, Amit cleared the computer-based exam and BSF physical standards.",
+    "imageUrl": "/images/cadet_uniform_1.png",
+    "createdAt": "2026-01-10T00:00:00.000Z"
+  },
+  {
+    "id": "r4",
+    "studentName": "Vikram Singh",
+    "examQualified": "CDS (UPSC)",
+    "rankPosition": "IMA Selected (152 Course)",
+    "beforeStory": "Vikram struggled with general knowledge and was screened out during previous SSB interviews.",
+    "afterStory": "With intensive SSB guidance, mock interviews, and GTO practice, Vikram got recommended by the SSB and joined the Indian Military Academy.",
+    "imageUrl": "/images/cadet_uniform_1.png",
+    "createdAt": "2026-02-18T00:00:00.000Z"
+  }
+]

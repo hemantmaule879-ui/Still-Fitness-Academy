@@ -1,0 +1,38 @@
+.container {
+  margin-top: 1.5rem;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.tabBtn {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: hsl(var(--text-secondary));
+  padding: 0.6rem 1.4rem;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.tabBtn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: hsl(var(--pure-white));
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.activeTab {
+  background: linear-gradient(135deg, hsl(var(--army-green)), hsl(var(--navy-blue)));
+  color: hsl(var(--pure-white));
+  border-color: hsl(var(--army-green-light));
+  box-shadow: 0 4px 15px rgba(75, 83, 32, 0.3);
+}

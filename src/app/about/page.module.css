@@ -1,0 +1,325 @@
+.wrapper {
+  overflow-x: hidden;
+}
+
+/* Page Header Banner */
+.headerBanner {
+  background-size: cover;
+  background-position: center;
+  padding: 140px 0 80px;
+  text-align: center;
+  border-bottom: 2px solid hsl(var(--army-green));
+}
+
+.subtitle {
+  color: hsl(var(--saffron));
+  font-size: 0.95rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 3rem;
+  color: hsl(var(--pure-white));
+  font-weight: 700;
+}
+
+.introText {
+  font-size: 1.05rem;
+  color: hsl(var(--text-secondary));
+  line-height: 1.8;
+}
+
+.introImgContainer {
+  position: relative;
+  padding: 1rem;
+}
+
+.introImg {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.experienceBadge {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  background: linear-gradient(135deg, hsl(var(--navy-blue)), hsl(var(--navy-blue-dark)));
+  border: 2px solid hsl(var(--saffron));
+  color: hsl(var(--pure-white));
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.experienceBadge strong {
+  font-size: 2.2rem;
+  color: hsl(var(--saffron));
+  display: block;
+  font-family: var(--font-heading);
+  line-height: 1;
+}
+
+/* Vision & Mission */
+.visionBox {
+  background: rgba(10, 35, 66, 0.4);
+  border: 2px solid rgba(255, 153, 51, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 3.5rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.visionLabel {
+  display: inline-block;
+  background: rgba(255, 153, 51, 0.1);
+  border: 1px solid hsl(var(--saffron));
+  color: hsl(var(--saffron));
+  padding: 0.4rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 50px;
+  margin-bottom: 1.5rem;
+}
+
+.visionBox h2 {
+  font-family: var(--font-body);
+  font-size: 1.8rem;
+  color: hsl(var(--pure-white));
+  line-height: 1.6;
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.missionCard {
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  border-top: 3px solid hsl(var(--army-green));
+}
+
+.missionCard:hover {
+  transform: translateY(-5px);
+  border-top-color: hsl(var(--saffron));
+}
+
+.missionIcon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.missionCard h3 {
+  font-size: 1.3rem;
+  color: hsl(var(--pure-white));
+  margin-bottom: 0.75rem;
+}
+
+.missionCard p {
+  font-size: 0.85rem;
+  color: hsl(var(--text-secondary));
+  line-height: 1.6;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: hsl(var(--army-green));
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+  border-radius: 2px;
+}
+
+.timelineItem {
+  padding: 10px 40px;
+  position: relative;
+  background-color: transparent;
+  width: 50%;
+}
+
+.timelineItem::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  background-color: hsl(var(--dark-bg));
+  border: 4px solid hsl(var(--saffron));
+  top: 25px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timelineLeft {
+  left: 0;
+}
+
+.timelineRight {
+  left: 50%;
+}
+
+.timelineRight::after {
+  left: -10px;
+}
+
+.timelineContent {
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.timelineYear {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: hsl(var(--saffron));
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.timelineContent h3 {
+  font-size: 1.3rem;
+  color: hsl(var(--pure-white));
+  margin-bottom: 0.5rem;
+}
+
+.timelineContent p {
+  font-size: 0.9rem;
+  color: hsl(var(--text-secondary));
+  line-height: 1.6;
+}
+
+/* Director's Message */
+.directorImgContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.directorImg {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border: 4px solid hsl(var(--army-green));
+  box-shadow: var(--shadow-lg);
+}
+
+.quoteBlock {
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.8;
+  color: hsl(var(--text-primary));
+  position: relative;
+  padding-left: 2rem;
+  border-left: 3px solid hsl(var(--saffron));
+  margin-bottom: 1.5rem;
+}
+
+.directorSignature {
+  display: flex;
+  flex-direction: column;
+}
+
+.directorSignature strong {
+  font-size: 1.1rem;
+  color: hsl(var(--pure-white));
+}
+
+.directorSignature span {
+  font-size: 0.85rem;
+  color: hsl(var(--saffron));
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Why Choose Us features */
+.featureCard {
+  padding: 2rem;
+  border-left: 3px solid hsl(var(--army-green));
+  transition: var(--transition-normal);
+  height: 100%;
+}
+
+.featureCard:hover {
+  transform: translateX(5px);
+  border-left-color: hsl(var(--saffron));
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.featureTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.featureBullet {
+  color: hsl(var(--saffron));
+  font-size: 1.2rem;
+}
+
+.featureCard h3 {
+  font-size: 1.3rem;
+  color: hsl(var(--pure-white));
+}
+
+.featureCard p {
+  font-size: 0.9rem;
+  color: hsl(var(--text-secondary));
+  line-height: 1.6;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .headerBanner {
+    padding: 100px 0 50px;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .visionBox {
+    padding: 1.5rem;
+  }
+  .visionBox h2 {
+    font-size: 1.3rem;
+  }
+  .timeline::after {
+    left: 31px;
+  }
+  .timelineItem {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  .timelineItem::after {
+    left: 21px;
+    right: auto;
+  }
+  .timelineRight {
+    left: 0%;
+  }
+  .directorImg {
+    width: 200px;
+    height: 200px;
+  }
+}

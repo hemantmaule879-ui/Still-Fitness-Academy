@@ -1,0 +1,191 @@
+.container {
+  margin-top: 2rem;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.tabBtn {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: hsl(var(--text-secondary));
+  padding: 0.75rem 1.75rem;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.tabBtn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: hsl(var(--pure-white));
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.activeTab {
+  background: linear-gradient(135deg, hsl(var(--army-green)), hsl(var(--navy-blue)));
+  color: hsl(var(--pure-white));
+  border-color: hsl(var(--army-green-light));
+  box-shadow: 0 4px 15px rgba(75, 83, 32, 0.3);
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.courseCard {
+  padding: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: var(--transition-normal);
+}
+
+.courseCard:hover {
+  border-color: rgba(255, 153, 51, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cardHeader {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.categoryBadge {
+  display: inline-block;
+  background: rgba(75, 83, 32, 0.15);
+  color: hsl(var(--army-green-light));
+  border: 1px solid rgba(75, 83, 32, 0.3);
+  padding: 0.2rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+.courseCard[id*="police"] .categoryBadge {
+  background: rgba(10, 35, 66, 0.2);
+  color: #3b82f6;
+  border-color: rgba(10, 35, 66, 0.5);
+}
+
+.courseCard[id*="officer"] .categoryBadge {
+  background: rgba(255, 153, 51, 0.1);
+  color: hsl(var(--saffron));
+  border-color: rgba(255, 153, 51, 0.3);
+}
+
+.cardHeader h2 {
+  font-size: 2.2rem;
+  color: hsl(var(--pure-white));
+  margin-bottom: 0.25rem;
+}
+
+.tagline {
+  color: hsl(var(--saffron));
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.detailBlock {
+  font-size: 1.05rem;
+}
+
+.detailBlock strong {
+  color: hsl(var(--pure-white));
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.detailBlock p {
+  color: hsl(var(--text-secondary));
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+.columnBlock strong {
+  color: hsl(var(--pure-white));
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-left: 2px solid hsl(var(--saffron));
+  padding-left: 0.5rem;
+}
+
+.columnBlock ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.columnBlock li {
+  font-size: 0.9rem;
+  color: hsl(var(--text-secondary));
+  position: relative;
+  padding-left: 1.25rem;
+  line-height: 1.5;
+}
+
+.columnBlock li::before {
+  content: '▪';
+  position: absolute;
+  left: 0;
+  color: hsl(var(--army-green-light));
+}
+
+.courseCard[id*="police"] .columnBlock li::before {
+  color: #3b82f6;
+}
+
+.courseCard[id*="officer"] .columnBlock li::before {
+  color: hsl(var(--saffron));
+}
+
+.cardFooter {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .courseCard {
+    padding: 1.5rem;
+  }
+  .cardHeader h2 {
+    font-size: 1.6rem;
+  }
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

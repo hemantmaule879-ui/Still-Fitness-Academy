@@ -1,0 +1,141 @@
+.wrapper {
+  overflow-x: hidden;
+}
+
+/* Page Header Banner */
+.headerBanner {
+  background-size: cover;
+  background-position: center;
+  padding: 140px 0 80px;
+  text-align: center;
+  border-bottom: 2px solid hsl(var(--army-green));
+}
+
+.subtitle {
+  color: hsl(var(--saffron));
+  font-size: 0.95rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 3rem;
+  color: hsl(var(--pure-white));
+  font-weight: 700;
+}
+
+.introText {
+  font-size: 1.05rem;
+  color: hsl(var(--text-secondary));
+  line-height: 1.8;
+}
+
+.introImg {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Modules Cards */
+.moduleCard {
+  padding: 2.5rem 2rem;
+  border-top: 3px solid hsl(var(--army-green));
+  transition: var(--transition-normal);
+}
+
+.moduleCard:hover {
+  transform: translateY(-5px);
+  border-top-color: hsl(var(--saffron));
+  box-shadow: var(--shadow-md);
+}
+
+.moduleCard h3 {
+  font-size: 1.4rem;
+  color: hsl(var(--pure-white));
+  margin-bottom: 1rem;
+}
+
+.moduleCard p {
+  font-size: 0.9rem;
+  color: hsl(var(--text-secondary));
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.moduleCard ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.moduleCard li {
+  font-size: 0.85rem;
+  color: hsl(var(--text-primary));
+  font-weight: 500;
+}
+
+/* Schedule Table */
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-lg);
+  background: rgba(15, 19, 25, 0.5);
+  box-shadow: var(--shadow-md);
+}
+
+.scheduleTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 600px;
+}
+
+.scheduleTable th, .scheduleTable td {
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.scheduleTable th {
+  background-color: hsl(var(--navy-blue));
+  color: hsl(var(--pure-white));
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.scheduleTable tr:last-child td {
+  border-bottom: none;
+}
+
+.scheduleTable tr:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.timeCol {
+  color: hsl(var(--saffron));
+  font-weight: 700;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  width: 250px;
+}
+
+.activityCol {
+  color: hsl(var(--text-primary));
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .headerBanner {
+    padding: 100px 0 50px;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+}

@@ -1,0 +1,37 @@
+.wrapper {
+  overflow-x: hidden;
+}
+
+/* Page Header Banner */
+.headerBanner {
+  background-size: cover;
+  background-position: center;
+  padding: 140px 0 80px;
+  text-align: center;
+  border-bottom: 2px solid hsl(var(--army-green));
+}
+
+.subtitle {
+  color: hsl(var(--saffron));
+  font-size: 0.95rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 3rem;
+  color: hsl(var(--pure-white));
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .headerBanner {
+    padding: 100px 0 50px;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+}

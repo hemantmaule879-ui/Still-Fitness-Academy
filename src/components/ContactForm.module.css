@@ -1,0 +1,81 @@
+.formCard {
+  padding: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: var(--transition-normal);
+}
+
+.formCard:hover {
+  border-color: rgba(75, 83, 32, 0.3);
+}
+
+.formCard h3 {
+  font-size: 1.8rem;
+  color: hsl(var(--pure-white));
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: hsl(var(--saffron));
+  margin-bottom: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.errorText {
+  background: rgba(211, 47, 47, 0.1);
+  border: 1px solid rgba(211, 47, 47, 0.3);
+  color: #ff5252;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.successState {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.successIcon {
+  width: 64px;
+  height: 64px;
+  background: rgba(75, 83, 32, 0.2);
+  border: 2px solid hsl(var(--army-green-light));
+  border-radius: 50%;
+  color: hsl(var(--army-green-light));
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.successState h3 {
+  font-size: 1.8rem;
+  color: hsl(var(--pure-white));
+  margin-bottom: 0.5rem;
+}
+
+.successState p {
+  color: hsl(var(--text-secondary));
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .formCard {
+    padding: 1.5rem;
+  }
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+}

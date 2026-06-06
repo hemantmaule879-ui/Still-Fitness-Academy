@@ -1,0 +1,147 @@
+.container {
+  margin-top: 1.5rem;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+
+.searchBox {
+  width: 100%;
+  max-width: 600px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.tabBtn {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: hsl(var(--text-secondary));
+  padding: 0.5rem 1.25rem;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.tabBtn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: hsl(var(--pure-white));
+}
+
+.activeTab {
+  background: linear-gradient(135deg, hsl(var(--army-green)), hsl(var(--navy-blue)));
+  color: hsl(var(--pure-white));
+  border-color: hsl(var(--army-green-light));
+  box-shadow: 0 4px 15px rgba(75, 83, 32, 0.3);
+}
+
+.noBlogs {
+  text-align: center;
+  padding: 3rem;
+  color: hsl(var(--text-muted));
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+}
+
+/* Cards styling */
+.card {
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 153, 51, 0.2);
+}
+
+.imgContainer {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-slow);
+}
+
+.card:hover .img {
+  transform: scale(1.05);
+}
+
+.categoryBadge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: hsl(var(--navy-blue));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: hsl(var(--pure-white));
+  font-size: 0.7rem;
+  padding: 0.25rem 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: hsl(var(--text-muted));
+  margin-bottom: 0.5rem;
+}
+
+.content h3 {
+  font-size: 1.3rem;
+  color: hsl(var(--pure-white));
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  flex-grow: 0;
+}
+
+.content p {
+  font-size: 0.9rem;
+  color: hsl(var(--text-secondary));
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.readMoreLink {
+  color: hsl(var(--saffron));
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: auto;
+}
+
+.readMoreLink:hover {
+  color: hsl(var(--pure-white));
+  padding-left: 5px;
+}

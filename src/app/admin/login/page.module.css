@@ -1,0 +1,64 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(var(--dark-bg));
+  background-image: radial-gradient(circle at center, rgba(75, 83, 32, 0.15) 0%, rgba(9, 11, 14, 1) 70%);
+  padding: 1.5rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  padding: 3rem 2.5rem;
+  border: 1px solid rgba(255, 153, 51, 0.2);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 1rem;
+}
+
+.header h2 {
+  font-size: 1.6rem;
+  color: hsl(var(--pure-white));
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.header span {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: hsl(var(--saffron));
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+}
+
+.errorAlert {
+  background: rgba(211, 47, 47, 0.1);
+  border: 1px solid rgba(211, 47, 47, 0.3);
+  color: #ff5252;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.backHome {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+}
+
+.backHome a {
+  color: hsl(var(--text-muted));
+}
+
+.backHome a:hover {
+  color: hsl(var(--saffron));
+}

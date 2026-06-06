@@ -1,0 +1,490 @@
+.wrapper {
+  overflow-x: hidden;
+}
+
+/* 1. HERO SECTION */
+.hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  display: flex;
+  align-items: center;
+  min-height: 85vh;
+  position: relative;
+}
+
+.heroContent {
+  max-width: 800px;
+  text-align: left;
+}
+
+.patrioticTag {
+  background: rgba(255, 153, 51, 0.1);
+  border: 1px solid rgba(255, 153, 51, 0.4);
+  color: hsl(var(--saffron));
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  padding: 0.4rem 1.25rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: hsl(var(--pure-white));
+  margin-bottom: 1.5rem;
+}
+
+.heroSubheadline {
+  font-size: 1.25rem;
+  color: hsl(var(--text-secondary));
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.heroButtons {
+  margin-top: 1.5rem;
+}
+
+/* 2. STATS SECTION */
+.statsSection {
+  margin-top: -50px;
+  position: relative;
+  z-index: 10;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.statCard {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  border-bottom: 3px solid hsl(var(--army-green));
+  transition: var(--transition-normal);
+}
+
+.statCard:hover {
+  transform: translateY(-5px);
+  border-bottom-color: hsl(var(--saffron));
+}
+
+.statIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.statNumber {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  color: hsl(var(--pure-white));
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: hsl(var(--text-secondary));
+  font-weight: 600;
+}
+
+/* 3. COURSE CARDS */
+.courseCard {
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.courseCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(75, 83, 32, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.courseHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.courseHeader h3 {
+  font-size: 1.6rem;
+  color: hsl(var(--pure-white));
+}
+
+.courseBadge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  background-color: hsl(var(--army-green));
+  color: hsl(var(--pure-white));
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.courseCard p {
+  color: hsl(var(--text-secondary));
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.courseBullets {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.courseBullets li {
+  font-size: 0.9rem;
+  color: hsl(var(--text-primary));
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.courseFooter {
+  margin-top: auto;
+}
+
+/* 4. RESULTS SECTION */
+.studentCard {
+  background-color: hsl(var(--card-bg));
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition-normal);
+}
+
+.studentCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(255, 153, 51, 0.2);
+}
+
+.studentImgWrapper {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.studentImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-slow);
+}
+
+.studentCard:hover .studentImg {
+  transform: scale(1.05);
+}
+
+.rankBadge {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: linear-gradient(135deg, hsl(var(--saffron)), hsl(var(--saffron-dark)));
+  color: #000000;
+  padding: 0.4rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: var(--shadow-sm);
+}
+
+.studentContent {
+  padding: 1.5rem;
+}
+
+.studentContent h3 {
+  font-size: 1.4rem;
+  color: hsl(var(--pure-white));
+  margin-bottom: 0.25rem;
+}
+
+.studentExam {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: hsl(var(--saffron));
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.studentStory p {
+  font-size: 0.85rem;
+  color: hsl(var(--text-secondary));
+  line-height: 1.5;
+}
+
+/* 6. GALLERY PREVIEW */
+.galleryCard {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  height: 200px;
+  box-shadow: var(--shadow-sm);
+}
+
+.galleryImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-slow);
+}
+
+.galleryOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(9, 11, 14, 0.95) 20%, rgba(9, 11, 14, 0.2));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem;
+  opacity: 0;
+  transition: var(--transition-normal);
+}
+
+.galleryCard:hover .galleryOverlay {
+  opacity: 1;
+}
+
+.galleryCard:hover .galleryImg {
+  transform: scale(1.1);
+}
+
+.galleryTag {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: hsl(var(--saffron));
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.25rem;
+}
+
+.galleryOverlay p {
+  color: hsl(var(--pure-white));
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* 7. LATEST UPDATES */
+.blogCard {
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: var(--transition-normal);
+}
+
+.blogCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 153, 51, 0.2);
+}
+
+.blogImgContainer {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.blogImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-slow);
+}
+
+.blogCard:hover .blogImg {
+  transform: scale(1.05);
+}
+
+.blogCategoryBadge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: hsl(var(--navy-blue));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: hsl(var(--pure-white));
+  font-size: 0.7rem;
+  padding: 0.25rem 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.blogInfo {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.blogDate {
+  font-size: 0.8rem;
+  color: hsl(var(--text-muted));
+  margin-bottom: 0.5rem;
+}
+
+.blogInfo h3 {
+  font-size: 1.3rem;
+  color: hsl(var(--pure-white));
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  flex-grow: 0;
+}
+
+.blogInfo p {
+  font-size: 0.9rem;
+  color: hsl(var(--text-secondary));
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.readMoreLink {
+  color: hsl(var(--saffron));
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: auto;
+}
+
+.readMoreLink:hover {
+  color: hsl(var(--pure-white));
+  padding-left: 5px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+  .heroTitle {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 110px;
+    padding-bottom: 60px;
+    min-height: auto;
+    text-align: center;
+  }
+  .heroContent {
+    text-align: center;
+  }
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+  .heroSubheadline {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .heroButtons {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .statsSection {
+    margin-top: -20px;
+  }
+  .statCard {
+    padding: 1.5rem 1rem;
+  }
+  .statNumber {
+    font-size: 2.2rem;
+  }
+  .courseCard {
+    padding: 1.5rem;
+  }
+  .courseHeader h3 {
+    font-size: 1.3rem;
+  }
+  .studentImgWrapper {
+    height: 200px;
+  }
+  .galleryCard {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+  .patrioticTag {
+    font-size: 0.7rem;
+    padding: 0.3rem 1rem;
+    margin-bottom: 1rem;
+  }
+  .heroTitle {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  .heroSubheadline {
+    font-size: 0.92rem;
+    margin-bottom: 1.25rem;
+  }
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .statCard {
+    padding: 1.25rem 0.75rem;
+  }
+  .statIcon {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .statNumber {
+    font-size: 1.8rem;
+  }
+  .statLabel {
+    font-size: 0.75rem;
+  }
+  .courseCard {
+    padding: 1.25rem;
+  }
+  .blogInfo h3 {
+    font-size: 1.1rem;
+  }
+  .galleryCard {
+    height: 140px;
+  }
+}
+

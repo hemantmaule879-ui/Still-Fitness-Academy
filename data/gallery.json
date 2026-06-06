@@ -1,0 +1,44 @@
+[
+  {
+    "id": "g1",
+    "category": "ground",
+    "imageUrl": "/images/ground_training_1.png",
+    "caption": "Cadets practicing morning sprint and endurance drill",
+    "createdAt": "2026-05-10T00:00:00.000Z"
+  },
+  {
+    "id": "g2",
+    "category": "ground",
+    "imageUrl": "/images/hero_bg.png",
+    "caption": "Weekly physical agility and obstacle clearing drill",
+    "createdAt": "2026-05-12T00:00:00.000Z"
+  },
+  {
+    "id": "g3",
+    "category": "classroom",
+    "imageUrl": "/images/classroom_training_1.png",
+    "caption": "Classroom coaching for GK, Math, and Marathi Grammar",
+    "createdAt": "2026-05-14T00:00:00.000Z"
+  },
+  {
+    "id": "g4",
+    "category": "celebrations",
+    "imageUrl": "/images/cadet_uniform_1.png",
+    "caption": "Felicitation ceremony for selected cadets entering Uniform Services",
+    "createdAt": "2026-05-20T00:00:00.000Z"
+  },
+  {
+    "id": "g5",
+    "category": "events",
+    "imageUrl": "/images/hero_bg.png",
+    "caption": "Motivational seminar led by retired officers on life in the Armed Forces",
+    "createdAt": "2026-05-22T00:00:00.000Z"
+  },
+  {
+    "id": "g6",
+    "category": "seminars",
+    "imageUrl": "/images/classroom_training_1.png",
+    "caption": "Interactive doubt clearing and strategy planning sessions",
+    "createdAt": "2026-05-25T00:00:00.000Z"
+  }
+]
