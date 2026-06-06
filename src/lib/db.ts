@@ -1,7 +1,23 @@
 import fs from 'fs';
 import path from 'path';
 
-const DATA_DIR = path.join(process.cwd(), 'data');
+const isFileSystemAvailable = (() => {
+  try {
+    return typeof fs !== 'undefined' && typeof fs.existsSync === 'function' && typeof fs.writeFileSync === 'function';
+  } catch (e) {
+    return false;
+  }
+})();
+
+const isPathAvailable = (() => {
+  try {
+    return typeof path !== 'undefined' && typeof path.join === 'function';
+  } catch (e) {
+    return false;
+  }
+})();
+
+const DATA_DIR = isPathAvailable ? path.join(process.cwd(), 'data') : '';
 
 export interface Inquiry {
   id: string;
@@ -44,37 +60,80 @@ export interface StudentResult {
   createdAt: string;
 }
 
+// In-memory cache to avoid repeated file system access and act as fallback
+const memoryCache: {
+  'contacts.json': any[] | null;
+  'blogs.json': any[] | null;
+  'gallery.json': any[] | null;
+  'results.json': any[] | null;
+} = {
+  'contacts.json': null,
+  'blogs.json': null,
+  'gallery.json': null,
+  'results.json': null,
+};
+
 // Ensure database directory exists
 function ensureDataDir() {
-  if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true });
+  try {
+    if (isFileSystemAvailable && DATA_DIR) {
+      if (!fs.existsSync(DATA_DIR)) {
+        fs.mkdirSync(DATA_DIR, { recursive: true });
+      }
+    }
+  } catch (error) {
+    console.warn('Filesystem directory check/creation failed, using in-memory store instead.', error);
   }
 }
 
 // Generic file helpers with locking / safety checks
 function readDataFile<T>(filename: string, defaultData: T[]): T[] {
-  ensureDataDir();
-  const filePath = path.join(DATA_DIR, filename);
-  if (!fs.existsSync(filePath)) {
-    fs.writeFileSync(filePath, JSON.stringify(defaultData, null, 2), 'utf-8');
-    return defaultData;
+  const cacheKey = filename as keyof typeof memoryCache;
+  if (memoryCache[cacheKey] !== null) {
+    return memoryCache[cacheKey] as T[];
   }
+
+  let data = defaultData;
   try {
-    const fileContent = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(fileContent);
+    if (isFileSystemAvailable && DATA_DIR) {
+      ensureDataDir();
+      const filePath = path.join(DATA_DIR, filename);
+      if (!fs.existsSync(filePath)) {
+        try {
+          fs.writeFileSync(filePath, JSON.stringify(defaultData, null, 2), 'utf-8');
+        } catch (writeError) {
+          console.warn(`Could not write default data for ${filename} to filesystem:`, writeError);
+        }
+      } else {
+        const fileContent = fs.readFileSync(filePath, 'utf-8');
+        data = JSON.parse(fileContent);
+      }
+    }
   } catch (error) {
-    console.error(`Error reading ${filename}:`, error);
-    return defaultData;
+    console.warn(`Error reading ${filename} from filesystem, falling back to default/in-memory data:`, error);
+    data = defaultData;
   }
+
+  memoryCache[cacheKey] = data;
+  return data;
 }
 
 function writeDataFile<T>(filename: string, data: T[]) {
-  ensureDataDir();
-  const filePath = path.join(DATA_DIR, filename);
-  // Atomic write
-  const tempPath = `${filePath}.tmp`;
-  fs.writeFileSync(tempPath, JSON.stringify(data, null, 2), 'utf-8');
-  fs.renameSync(tempPath, filePath);
+  const cacheKey = filename as keyof typeof memoryCache;
+  memoryCache[cacheKey] = data;
+
+  try {
+    if (isFileSystemAvailable && DATA_DIR) {
+      ensureDataDir();
+      const filePath = path.join(DATA_DIR, filename);
+      // Atomic write
+      const tempPath = `${filePath}.tmp`;
+      fs.writeFileSync(tempPath, JSON.stringify(data, null, 2), 'utf-8');
+      fs.renameSync(tempPath, filePath);
+    }
+  } catch (error) {
+    console.warn(`Error writing ${filename} to filesystem, saved in-memory only:`, error);
+  }
 }
 
 // Seed Data definition
